@@ -13,8 +13,6 @@ class Solution(object):
         
         if head == None:
             return head
-        if head.next == None:
-            return head.next
         len_list = 0
         temp_head = head
         while temp_head:
