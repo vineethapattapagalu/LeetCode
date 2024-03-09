@@ -5,12 +5,11 @@ class Solution(object):
         :rtype: int
         """
         
-        i = 1
-        while i < len(nums):
-            if nums[i] == nums[i-1]:
-                nums.pop(i)
-            else:
+        i , j =0, 1
+        while j < len(nums):
+            if nums[j] != nums[j-1]:
+                nums[i+1] = nums[j]
                 i += 1
-        return len(nums)
-            
+            j += 1
+        return i+1
         
