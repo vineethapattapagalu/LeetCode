@@ -4,10 +4,7 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        ways_list = [1, 2]
-        if n <= 2:
-            return ways_list[n-1]
+        result = [1, 2]
         for i in range(2, n):
-            ways_list.append(ways_list[i-1]+ways_list[i-2])
-        return ways_list[-1]
-        
+            result.append(result[i-1]+result[i-2])
+        return result[n-1]
