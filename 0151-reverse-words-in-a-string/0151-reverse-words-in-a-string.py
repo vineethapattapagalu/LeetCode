@@ -13,18 +13,17 @@ class Solution(object):
 #             result.append(i)
 #         return ' '.join(result[::-1])
         
-        s_list = []
+        result = ''
         
         temp = ''
         for i in s:
             if i == ' ':
                 if temp != '':
-                    s_list.append(temp)
+                    result = ' '+temp+result
                 temp = ''
             else:
                 temp += i
         if temp != '':
-            s_list.append(temp)
-        print(s_list)
-        s_list = s_list[::-1]
-        return ' '.join(s_list)
+            result = ' '+temp+result
+        
+        return result[1:]
